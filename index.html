@@ -3,48 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Password Generator</title>
+    <link href='https://fonts.googleapis.com/css?family=Didact Gothic' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
 <body>
-    <main>
-        <section class="passwordapp">
-            <div id="output">
-                <p id="passwordString"></p>
-       
-            </div>
-            <div class="slider">
-                <div class="slidecontainer">
-                    <input type="range" min="1" max="16" value="8" class="slider" id="countSlider">
-                    <p>Value: <span id="sliderValue"></span></p>
-                </div>
-            </div>
+    <main class="passwordapp">
+        <section id="output">
+            <p id="passwordString">...</p>
+    
+        </section>
+        <section class="calibration">
 
-            <div class="numbers">
-                <p>Numbers <input type="checkbox" id="nums"></p>
-                
-            </div>
-            <div class="uppercase">
-                <p>Captial letters <input type="checkbox" id="caps"></p>
-                
-            </div>
-            <div class="symbols">
-                <p>Symbols <input type="checkbox" id="symbols"></p>
+            <div class="slidecontainer toggle">
+                <input type="range" min="1" max="16" value="8" class="slider" id="countslider">
+              <span id="slidervalue"></span>
             </div>
 
-            <button id="genPw">GENERATE</button>
+            <div class="numbers toggle">
+                <p>Numbers</p> <input type="checkbox" id="nums">
+            </div>
 
+            <div class="uppercase toggle">
+                <p>Capital letters</p> <input type="checkbox" id="caps">
+            </div>
 
-
-            <!-- <label class="switch">
-               
-                <span class="slider round" tabindex="0"></span>
-            </label> -->
-
+            <div class="symbols toggle">
+                <p>Symbols</p> <input type="checkbox" id="symbols">
+            </div>
 
         </section>
+
+        <section class="genbutton">
+            <button id="genpw">GENERATE</button>
+        </section>
     </main>
+
+    <div class="shapes">
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+
+
     
 </body>
 </html>

@@ -1,34 +1,232 @@
+:root{
+    --bg-col1: hsl(350, 100%, 88%);
+    --bg-col2: hsl(300, 100%, 25%);
+    --shape-color: hsla(0, 0%, 100%, 0.2);
+    --section-color: hsla(350, 100%, 88%, 0.5);
+}
+
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-body{
-    height: 100vh;
-    width: 100vw;
-    background-image: linear-gradient(white, blue);
 
-}
-
+/* ####################### ####################### #######################  */
+/* ####################### PASSWORD APP STYLING ####################### */
+/* ####################### ####################### #######################  */
 .passwordapp{
-    background-color: black;
-    max-width: 600px;
-    padding: 1rem;    
-    margin: 5rem auto;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 
+    background-color: transparent;
+    border: 5px dotted white;
+    border-radius: 2rem;
+
+    padding: 1rem;
+    z-index: 9999;
 }
 
-.passwordapp > div{
-    background-color: pink;
+.passwordapp > section{
+    background-color: var(--section-color);
     margin-block: 1rem;
     padding-block: 2rem;
+    padding-inline: 1rem;
+    border: 2px solid white;
+    border-radius: 2rem;
 }
 
+#passwordString{
+    text-align: center;
+    font-size: 1rem;
 
+}
+#slidervalue{
+    font-size: 1rem;
+}
 
+.toggle {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
 
+.toggle > p, .slider{
+    margin-right: 2rem;
+    white-space: nowrap;
+    font-size: 1.5rem;
+}
 
-.slidecontainer{
-  max-width: 100%;
+.genbutton{
+    text-align: center;
+  
+}
+
+#genpw{
+    font-size: 1.5rem;
+    border-radius: 3rem;
+    padding: 1rem;
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+}
+#genpw:hover{
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+    cursor: pointer;
+}
+/* ####################### ####################### #######################  */
+/* ####################### media queries ####################### */
+/* ####################### ####################### #######################  */
+
+@media (min-width: 35rem){
+
+    .passwordapp{
+        width: 600px;
+    }
+    #passwordString{
+        font-size: 2rem;
+    }
+    #slidervalue{
+        font-size: 2rem;
+    }
+    .toggle > p, .slider{
+        font-size: 3rem;
+    }
+    
+    #genpw{
+        font-size: 3rem;
+    }
+
+}
+
+/* ####################### ####################### #######################  */
+/* ####################### FUNKY FLOATING OBJECT FUN TIMES ####################### */
+/* ####################### ####################### #######################  */
+body{
+    background-image: linear-gradient(var(--bg-col1), var(--bg-col2));
+    width:100vw;
+    height: 100vh;
+    font-family: 'Didact Gothic';
+    
+}
+
+.shapes{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+@keyframes floating {
+    0%{
+        opacity: 1;
+        border-radius: 0;
+        transform: translateY(0) rotate(0deg) ;
+    }
+    100%{
+        opacity: 0;
+        border-radius: 50%;
+        transform: translateY(-1000px) rotate(720deg) ;
+    }   
+}
+
+.shape{
+    position: absolute;
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: var(--shape-color);
+    bottom: -150px;
+    animation: floating 10s linear infinite;
+}
+
+.shapes .shape:nth-child(1){
+    left:5%;
+    animation-delay: 0;
+    height: 25px;
+    width: 25px;
+    animation-duration: 12s;
+}
+.shapes .shape:nth-child(2){
+    left: 10%;
+    animation-delay: 10s;
+    height: 50px;
+    width: 50px;
+
+}
+.shapes .shape:nth-child(3){
+    left: 15%;
+    animation-delay: 3s;
+    height: 100px;
+    width: 100px;
+    animation-duration: 25s;
+
+}
+.shapes .shape:nth-child(4){
+    left: 20%;
+    animation-delay: 17s;
+    height: 75px;
+    width: 75px;
+
+}
+.shapes .shape:nth-child(5){
+    left: 25%;
+    animation-delay: 5s;
+    height: 50px;
+    width: 50px;
+    animation-duration: 20s;
+
+}
+.shapes .shape:nth-child(6){
+    left: 35%;
+    animation-delay: 3s;
+    height: 30px;
+    width: 30px;
+    animation-duration: 15s;
+
+}
+.shapes .shape:nth-child(7){
+    left: 55%;
+    animation-delay: 0;
+    height: 50px;
+    width: 50px;
+    animation-duration: 10s;
+
+}
+.shapes .shape:nth-child(8){
+    left: 60%;
+    animation-delay: 8s;
+    height: 150px;
+    width: 150px;
+    animation-duration: 30s;
+
+}
+.shapes .shape:nth-child(9){
+    left: 70%;
+    animation-delay: 5s;
+    height: 60px;
+    width: 60px;
+    animation-duration: 10s;
+
+}
+.shapes .shape:nth-child(10){
+    left: 95%;
+    animation-delay: 4s;
+    height: 25px;
+    width:  25px;
+
+}
+.shapes .shape:nth-child(11){
+    left: 83%;
+    animation-delay: 7s;
+    height: 40px;
+    width:  40px;
+    animation-duration: 15s;
+
 }

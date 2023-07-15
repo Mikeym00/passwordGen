@@ -2,8 +2,8 @@ const upperCaseStatus = document.getElementById("caps");
 const numberStatus = document.getElementById("nums");
 const symbolStatus = document.getElementById("symbols");
 
-const slider = document.getElementById("countSlider");
-const output = document.getElementById("sliderValue");
+const slider = document.getElementById("countslider");
+const output = document.getElementById("slidervalue");
 // Display the default slider value
 output.innerHTML = slider.value; 
 
@@ -14,7 +14,7 @@ slider.oninput = function() {
 
 // #################################################################################
 
-const generatePassword = document.getElementById("genPw");
+const generatePassword = document.getElementById("genpw");
 generatePassword.addEventListener("click", generateButton);
 
 
@@ -49,7 +49,7 @@ function generateButton(){
     for(index of indices){
         password += holding[index];
     }
-    document.getElementById("passwordString").innerHTML = password; 
+    document.getElementById("passwordString").textContent = password; 
 
     console.log(password);
 
