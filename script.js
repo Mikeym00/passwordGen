@@ -50,8 +50,5 @@ function generateButton(){
         password += holding[index];
     }
     document.getElementById("passwordString").textContent = password; 
-
-    console.log(password);
-
 }
 

@@ -17,20 +17,32 @@
         <section class="calibration">
 
             <div class="slidecontainer toggle">
-                <input type="range" min="1" max="16" value="8" class="slider" id="countslider">
+                <input type="range" min="1" max="16" value="8" class="slider " id="countslider">
               <span id="slidervalue"></span>
             </div>
 
             <div class="numbers toggle">
-                <p>Numbers</p> <input type="checkbox" id="nums">
+                <p>Numbers</p> 
+                <label class="switch" >
+                    <input type="checkbox" class="button-checkbox" id="nums">
+                    <span class="button-slider" ></span>
+                </label>
             </div>
 
             <div class="uppercase toggle">
-                <p>Capital letters</p> <input type="checkbox" id="caps">
+                <p>Capital letters</p> 
+                <label class="switch">
+                    <input type="checkbox" class="button-checkbox" id="caps">
+                    <span class="button-slider"></span>
+                </label>
             </div>
 
             <div class="symbols toggle">
-                <p>Symbols</p> <input type="checkbox" id="symbols">
+                <p>Symbols</p> 
+                <label class="switch">
+                    <input type="checkbox" class="button-checkbox" id="symbols">
+                    <span class="button-slider"></span>
+                </label>
             </div>
 
         </section>
