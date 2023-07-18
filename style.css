@@ -3,12 +3,22 @@
     --bg-col2: hsl(300, 100%, 25%);
     --shape-color: hsla(0, 0%, 100%, 0.2);
     --section-color: hsla(350, 100%, 88%, 0.5);
+    --main-font: 'Didact Gothic';
 }
 
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+/* with the app taken out of flow via display:fixed, body must explicitly be made to fill the screen */
+body{
+    background-image: linear-gradient(var(--bg-col1), var(--bg-col2));
+    width: 100vw;
+    height: 100vh;
+    font-family: var(--main-font);
+    color: white; 
 }
 
 /* ####################### ####################### #######################  */
@@ -19,6 +29,7 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+     
 
     background-color: transparent;
     border: 5px dotted white;
@@ -26,6 +37,10 @@
 
     padding: 1rem;
     z-index: 9999;
+}
+
+#output{
+    position: relative;
 }
 
 .passwordapp > section{
@@ -40,9 +55,39 @@
 #passwordString{
     text-align: center;
     font-size: 1rem;
+    font-family: var(--main-font);
+    background: transparent;
+    border: none;
+    display: block;
+    margin: 0 auto;
+    color: white;
+}
+#copypassword{
+    position: absolute;
+    display: inline-block;
+    z-index: 1000;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    background: white;
+    border: 2px solid black;
+    bottom: -1rem;
+    left: 50%;
+    transform: translate(-50%);
+    cursor: pointer;
+}     
 
+.copy-icon{
+    font-size: 1.5rem;
 }
 
+#copypassword:focus,
+#copypassword:hover{
+    outline: none;
+    background-color: black;
+    border: 2px solid white;
+    color: white;
+ }
 
 .toggle {
     display: flex;
@@ -70,6 +115,7 @@
     color: white;
     border: 2px solid white;
 }
+
 #genpw:hover,
 #genpw:focus{
     background-color: white;
@@ -87,6 +133,8 @@
  
   .slider {
     flex: 2;
+    -webkit-appearance: none;
+    appearance: none;
     height: 15px;
     background: var(--bg-col2);
     opacity: 0.7;
@@ -99,6 +147,7 @@
     font-size: 1rem;
     flex: 1;
     text-align: right;
+    padding-right: 1rem;
   }
 
   .slider:hover{
@@ -165,8 +214,9 @@
 
  /* focus effects on click is annoying - COME BACK TO THIS */
 
- .button-checkbox:focus + .button-slider {
+ .button-checkbox:focus + .button-slider{
     box-shadow: 0 0 10px black;
+    outline: none;
  }
 
  .button-checkbox:checked + .button-slider:before {
@@ -214,20 +264,11 @@
 /* ####################### FUNKY FLOATING OBJECT STYLES AND ANIMATION  ####################### */
 /* ####################### ####################### #######################  */
 
-/* with the app taken out of flow via display:fixed, body must explicitly be made to fill the screen */
-body{
-    background-image: linear-gradient(var(--bg-col1), var(--bg-col2));
-    width:100vw;
-    height: 100vh;
-    font-family: 'Didact Gothic';
-    color: white;
-    
-}
 
 /* shapes container */
 
 .shapes{
-    position: relative;
+    position: absolute;
     width: 100%;
     height: 100%;
     overflow: hidden;

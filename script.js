@@ -49,6 +49,6 @@ function generateButton(){
     for(index of indices){
         password += holding[index];
     }
-    document.getElementById("passwordString").textContent = password; 
+    document.getElementById("passwordString").value = password; 
 }
 
