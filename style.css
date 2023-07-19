@@ -12,11 +12,16 @@
     padding: 0;
 }
 
-/* with the app taken out of flow via display:fixed, body must explicitly be made to fill the screen */
+html, body{
+    height: max(750px,100%);
+}
+
 body{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-image: linear-gradient(var(--bg-col1), var(--bg-col2));
-    width: 100vw;
-    height: 100vh;
     font-family: var(--main-font);
     color: white; 
 }
@@ -25,16 +30,8 @@ body{
 /* ####################### PASSWORD APP STYLING ####################### */
 /* ####################### ####################### #######################  */
 .passwordapp{
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-     
-
-    background-color: transparent;
     border: 5px dotted white;
     border-radius: 2rem;
-
     padding: 1rem;
     z-index: 9999;
 }
