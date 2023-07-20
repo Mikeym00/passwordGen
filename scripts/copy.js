@@ -12,6 +12,7 @@ function myFunction() {
      // Copy the text inside the text field
     navigator.clipboard.writeText(copyText.value);
   
-    // Alert the copied text
+    // Alert to give user confirmation copy button has worked 
+    // might changes this as it only copies after alert has been closed
     alert("Copied your new password: " + copyText.value);
   }

@@ -78,7 +78,6 @@ body{
     font-size: 1.5rem;
 }
 
-#copypassword:focus,
 #copypassword:hover{
     outline: none;
     background-color: black;
@@ -113,13 +112,13 @@ body{
     border: 2px solid white;
 }
 
-#genpw:hover,
-#genpw:focus{
+#genpw:hover{
     background-color: white;
     color: black;
     border: 2px solid black;
     cursor: pointer;
 }
+
 
 /* ####################### ####################### #######################  */
 /* ####################### BUTTON/SLIDER STYLES ####################### */
@@ -207,15 +206,7 @@ body{
  .button-checkbox:checked + .button-slider {
     background-color: var(--bg-col2);
  }
-
-
- /* focus effects on click is annoying - COME BACK TO THIS */
-
- .button-checkbox:focus + .button-slider{
-    box-shadow: 0 0 10px black;
-    outline: none;
- }
-
+ 
  .button-checkbox:checked + .button-slider:before {
     -webkit-transform: translateX(26px);
     -ms-transform: translateX(26px);
@@ -231,6 +222,24 @@ body{
     border-radius: 50%;
  }
 
+
+/* ####################### ####################### #######################  */
+/* ####################### focus settings ####################### */
+/* ####################### ####################### #######################  */
+
+:focus:not(:focus-visible),
+.button-checkbox:focus:not(:focus-visible) + .button-slider{
+    outline: 0;
+    box-shadow: none;
+  }
+
+:focus,
+.button-checkbox:focus + .button-slider{
+outline: 0;
+box-shadow:
+    0 0 0.5rem .2rem #fff,
+    0 0 0.5rem .35rem #069;
+}
 /* ####################### ####################### #######################  */
 /* ####################### media queries ####################### */
 /* ####################### ####################### #######################  */
