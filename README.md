@@ -2,7 +2,7 @@
 
 ### Live page - [Here](https://micheal-wooler.com/apps/passwordgen/passwordgen.html). 
 
-<u/>
+***
 
 Allows user to generate a random password string 1-16 characters long. By default, strings are composed of lower-case letters; the user can choose the password length and toggle the inclusion of upper-case letters, numbers, and symbols.
 
